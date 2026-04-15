@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="1044.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.salaoController">
+   <children>
+      <Label layoutX="457.0" layoutY="40.0" text="Cliente">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="289.0" fitWidth="416.0" layoutX="315.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cliente.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="BtSentar" layoutX="315.0" layoutY="462.0" mnemonicParsing="false" onAction="#BtSentar" prefHeight="25.0" prefWidth="124.0" text="Sentar" />
+      <Button fx:id="BtEsperar" layoutX="477.0" layoutY="462.0" mnemonicParsing="false" onAction="#BtEsperar" prefHeight="25.0" prefWidth="124.0" text="Esperar" />
+      <Button fx:id="BtPagar" layoutX="640.0" layoutY="462.0" mnemonicParsing="false" onAction="#BtPagar" prefHeight="25.0" prefWidth="124.0" text="Pagar" />
+      <Button fx:id="BtVoltar" layoutX="495.0" layoutY="519.0" mnemonicParsing="false" onAction="#BtVoltar" prefHeight="25.0" prefWidth="88.0" text="Voltar" />
+      <Label fx:id="texto" layoutX="342.0" layoutY="578.0" prefHeight="48.0" prefWidth="395.0" />
+   </children>
+</AnchorPane>
