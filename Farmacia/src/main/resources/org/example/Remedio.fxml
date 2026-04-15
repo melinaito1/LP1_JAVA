@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="563.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.FarmaciaController">
+   <children>
+      <ImageView fitHeight="254.0" fitWidth="342.0" layoutX="229.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Remedios.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="340.0" layoutY="33.0" prefHeight="39.0" prefWidth="120.0" text="Remédio">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="BtComprar" layoutX="105.0" layoutY="444.0" mnemonicParsing="false" onAction="#BtComprar" prefHeight="26.0" prefWidth="120.0" text="Comprar" />
+      <Button fx:id="BtCurar" layoutX="340.0" layoutY="444.0" mnemonicParsing="false" onAction="#BtCurar" prefHeight="26.0" prefWidth="120.0" text="Curar" />
+      <Button fx:id="BtDosar" layoutX="571.0" layoutY="444.0" mnemonicParsing="false" onAction="#BtDosar" prefHeight="26.0" prefWidth="120.0" text="Dosar" />
+      <Label fx:id="texto" layoutX="203.0" layoutY="371.0" prefHeight="18.0" prefWidth="400.0" />
+      <Button fx:id="BtVoltar" layoutX="363.0" layoutY="506.0" mnemonicParsing="false" onAction="#BtVoltar" prefHeight="26.0" prefWidth="79.0" text="Voltar" />
+   </children>
+</AnchorPane>

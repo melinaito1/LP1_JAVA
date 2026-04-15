@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="TableFarmacia" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.FarmaciaController">
+    <children>
+        <Button fx:id="BtRemedio" layoutX="346.0" layoutY="375.0" mnemonicParsing="false" onAction="#BtRemedio" prefHeight="26.0" prefWidth="98.0" text="Remédio" />
+        <Button fx:id="BtFuncionario" layoutX="177.0" layoutY="375.0" mnemonicParsing="false" onAction="#BtFuncionario" prefHeight="26.0" prefWidth="97.0" text="Funcionário" />
+        <Button fx:id="BtShampoo" layoutX="514.0" layoutY="375.0" mnemonicParsing="false" onAction="#BtShampoo" prefHeight="26.0" prefWidth="98.0" text="Shampoo" />
+        <Label layoutX="328.0" layoutY="29.0" prefHeight="34.0" prefWidth="134.0" text="Farmácia" textOverrun="CENTER_ELLIPSIS">
+            <font>
+                <Font name="Arial Bold" size="29.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="231.0" fitWidth="418.0" layoutX="186.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Images/images.jpg" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
