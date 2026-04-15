@@ -2,36 +2,39 @@
 
 Atividades da matéria de Lógica de Programação 1
 
-// UML: FARMACIA
-// Classe Balão
-//    Atributos: cor, material, volume. Métodos: estourar(), encher(), bater().
-// Classe Pessoa
-//    Atributos: gênero, altura, peso. Métodos: andar(), falar(), comprar().
-// Classe Remédio
-//    Atributos: composição, validade, valor. Métodos: curar(), desinflamar(), acalmar()
+UML: FARMACIA <br>
+Classe Funcionario <br>
+Atributos: nomeFuncionario, funcaoCargo, idFuncionario. <br> 
+Métodos: vender(), falar(), repor().<br> <br>
+Classe Remedio <br>
+Atributos: nomeRemedio, tipoRemedio, precoRemedio. <br>
+Métodos: comprar(), curar(), dosar(). <br><br>
+Classe Shampoo <br>
+Atributos: marcaShampoo, tipoShampoo, tamanhoShampoo. <br>
+Métodos: lavar(), enxaguar(), espumar(). <br><br>
 
 MAIN
 void main() {
 
-    Balao b = new Balao("Verde");
-    b.estourar();
-    b.encher();
+    Funcionario f = new Funcionario("Patrick");
+    f.vender();
+    f.repor();
 
-    Pessoa p = new Pessoa("Feminino");
-    p.falar();
-    p.comprar();
+    Shampoo s = new Shampoo("Grande");
+    s.espumar();
+    s.enxaguar();
 
     Remedio r = new Remedio();
     r.curar();
-    r.acalmar();
+    r.comprar();
     }
 
-CLASSE BALAO
-public class Balao {
+CLASSE FUNCIONARIO
+public class Funcionario {
 
-    private String cor;
-    private String material;
-    private double volume;
+    private String nomeFuncionario;
+    private String funcaoCargo;
+    private String idFuncionario;
 
     public void setCor(String cor){
         this.cor = cor;
