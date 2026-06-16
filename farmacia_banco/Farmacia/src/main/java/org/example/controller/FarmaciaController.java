@@ -28,6 +28,10 @@ public class FarmaciaController {
 
     @FXML
     void BtShampoo(ActionEvent event) {
-        System.out.println("Tela de Shampoo ainda não criada.");
+        try {
+            App.setRoot("Shampoo");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

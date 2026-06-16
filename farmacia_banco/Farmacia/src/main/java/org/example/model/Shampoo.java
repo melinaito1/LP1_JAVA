@@ -1,9 +1,41 @@
 package org.example.model;
 
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+
 public class Shampoo {
-    private String marcaShampoo = "Pantene";
-    private String tipoShampoo = "Liso";
-    private String tamanhoShampoo = "500ml";
+
+    private int id;
+    private String marcaShampoo;
+    private String tipoShampoo;
+    private Double precoShampoo;
+
+    private BooleanProperty selecionado = new SimpleBooleanProperty(false);
+
+    public Shampoo() {
+    }
+
+    public Shampoo(String marcaShampoo, String tipoShampoo, Double precoShampoo) {
+        this.marcaShampoo = marcaShampoo;
+        this.tipoShampoo = tipoShampoo;
+        this.precoShampoo = precoShampoo;
+    }
+
+    public Shampoo(int id, String marcaShampoo, String tipoShampoo, Double precoShampoo) {
+        this.id = id;
+        this.marcaShampoo = marcaShampoo;
+        this.tipoShampoo = tipoShampoo;
+        this.precoShampoo = precoShampoo;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 
     public String getMarcaShampoo() {
         return marcaShampoo;
@@ -13,6 +45,7 @@ public class Shampoo {
         this.marcaShampoo = marcaShampoo;
     }
 
+
     public String getTipoShampoo() {
         return tipoShampoo;
     }
@@ -21,24 +54,25 @@ public class Shampoo {
         this.tipoShampoo = tipoShampoo;
     }
 
-    public String getTamanhoShampoo() {
-        return tamanhoShampoo;
+
+    public Double getPrecoShampoo() {
+        return precoShampoo;
     }
 
-    public void setTamanhoShampoo(String tamanhoShampoo) {
-        this.tamanhoShampoo = tamanhoShampoo;
+    public void setPrecoShampoo(Double precoShampoo) {
+        this.precoShampoo = precoShampoo;
     }
 
-    public String lavar(){
-        return "O cliente lavou o cabelo com o shampoo";
+
+    public boolean isSelecionado() {
+        return selecionado.get();
     }
 
-    public String enxaguar(){
-        return "O cliente enxaguou o shampoo do cabelo";
+    public void setSelecionado(boolean selecionado) {
+        this.selecionado.set(selecionado);
     }
 
-    public String espumar(){
-        return "O shampoo faz espuma";
+    public BooleanProperty selecionadoProperty() {
+        return selecionado;
     }
-
 }

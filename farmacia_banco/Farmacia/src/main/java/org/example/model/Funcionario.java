@@ -15,13 +15,6 @@ public class Funcionario {
     public Funcionario() {
     }
 
-    public Funcionario(int id, String nome, String funcao, String cpf) {
-        this.id = id;
-        this.nome = nome;
-        this.funcao = funcao;
-        this.cpf = cpf;
-    }
-
     public Funcionario(String nome, String funcao, String cpf) {
         this.nome = nome;
         this.funcao = funcao;

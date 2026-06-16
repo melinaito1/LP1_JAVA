@@ -4,6 +4,8 @@ import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 
 public class Remedio {
+
+    private int id;
     private String nomeRemedio;
     private String tipoRemedio;
     private Double precoRemedio;
@@ -11,8 +13,29 @@ public class Remedio {
     private BooleanProperty selecionado = new SimpleBooleanProperty(false);
 
     public Remedio() {
-
     }
+
+    public Remedio(String nomeRemedio, String tipoRemedio, Double precoRemedio) {
+        this.nomeRemedio = nomeRemedio;
+        this.tipoRemedio = tipoRemedio;
+        this.precoRemedio = precoRemedio;
+    }
+
+    public Remedio(int id, String nomeRemedio, String tipoRemedio, Double precoRemedio) {
+        this.id = id;
+        this.nomeRemedio = nomeRemedio;
+        this.tipoRemedio = tipoRemedio;
+        this.precoRemedio = precoRemedio;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 
     public String getNomeRemedio() {
         return nomeRemedio;
@@ -22,6 +45,7 @@ public class Remedio {
         this.nomeRemedio = nomeRemedio;
     }
 
+
     public String getTipoRemedio() {
         return tipoRemedio;
     }
@@ -29,6 +53,7 @@ public class Remedio {
     public void setTipoRemedio(String tipoRemedio) {
         this.tipoRemedio = tipoRemedio;
     }
+
 
     public Double getPrecoRemedio() {
         return precoRemedio;
@@ -38,16 +63,16 @@ public class Remedio {
         this.precoRemedio = precoRemedio;
     }
 
-    public String comprar(){
-        return "O cliente comprou dipirona";
+
+    public boolean isSelecionado() {
+        return selecionado.get();
     }
 
-    public String curar(){
-        return "Dipirona fez efeito em 10 minutos";
+    public void setSelecionado(boolean selecionado) {
+        this.selecionado.set(selecionado);
     }
 
-    public String dosar(){
-        return "A dosagem da dipirona é 1g";
+    public BooleanProperty selecionadoProperty() {
+        return selecionado;
     }
-
 }
