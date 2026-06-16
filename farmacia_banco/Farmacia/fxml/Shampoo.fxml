@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane
+    prefHeight="600.0" prefWidth="1000.0"
+    style="-fx-background-color: #E8E8E8;"
+    xmlns="http://javafx.com/javafx/17"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="controller.ShampooController">
+
+    <VBox spacing="0.0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <!-- Título -->
+        <HBox alignment="CENTER" style="-fx-background-color: #E8E8E8;" prefHeight="70">
+            <Label text="Shampoo" style="-fx-font-size: 28px; -fx-font-weight: BOLD; -fx-text-fill: #222222;"/>
+        </HBox>
+
+        <!-- Corpo -->
+        <HBox spacing="30" style="-fx-background-color: #E8E8E8;" VBox.vgrow="ALWAYS">
+            <padding><Insets top="10" bottom="10" left="40" right="40"/></padding>
+
+            <!-- Formulário -->
+            <VBox spacing="18" prefWidth="260" alignment="TOP_LEFT">
+                <padding><Insets top="10"/></padding>
+
+                <VBox spacing="4">
+                    <Label text="Marca:" style="-fx-text-fill: #1565C0; -fx-font-size: 13px;"/>
+                    <TextField fx:id="txtMarca" promptText="Marca" prefWidth="240"
+                        style="-fx-background-color: white; -fx-border-color: #CCCCCC; -fx-border-radius: 3; -fx-background-radius: 3; -fx-font-size: 13px;"/>
+                </VBox>
+
+                <VBox spacing="4">
+                    <Label text="Tipo:" style="-fx-text-fill: #1565C0; -fx-font-size: 13px;"/>
+                    <TextField fx:id="txtTipo" promptText="Tipo" prefWidth="240"
+                        style="-fx-background-color: white; -fx-border-color: #CCCCCC; -fx-border-radius: 3; -fx-background-radius: 3; -fx-font-size: 13px;"/>
+                </VBox>
+
+                <VBox spacing="4">
+                    <Label text="Tamanho (ml):" style="-fx-text-fill: #1565C0; -fx-font-size: 13px;"/>
+                    <TextField fx:id="txtTamanho" promptText="Ex: 200ml" prefWidth="240"
+                        style="-fx-background-color: white; -fx-border-color: #CCCCCC; -fx-border-radius: 3; -fx-background-radius: 3; -fx-font-size: 13px;"/>
+                </VBox>
+            </VBox>
+
+            <!-- Tabela -->
+            <VBox VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS">
+                <TableView fx:id="tabelaShampoos" VBox.vgrow="ALWAYS"
+                    style="-fx-background-color: white; -fx-border-color: #BBBBBB;">
+
+                    <placeholder>
+                        <Label text="Não há conteúdo na tabela" style="-fx-text-fill: #CC4444; -fx-font-size: 13px;"/>
+                    </placeholder>
+
+                    <columns>
+                        <TableColumn fx:id="colCheckbox" text="Checkbox" prefWidth="80" minWidth="80" maxWidth="80"/>
+                        <TableColumn fx:id="colMarca"    text="Marca"    prefWidth="180"/>
+                        <TableColumn fx:id="colTipo"     text="Tipo"     prefWidth="160"/>
+                        <TableColumn fx:id="colTamanho"  text="Tamanho"  prefWidth="120"/>
+                    </columns>
+
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </VBox>
+        </HBox>
+
+        <!-- Botões CRUD -->
+        <HBox spacing="20" alignment="CENTER" prefHeight="70" style="-fx-background-color: #E8E8E8;">
+            <Button text="Cadastrar" prefWidth="120" prefHeight="32" onAction="#cadastrar"
+                style="-fx-background-color: #D6D6D6; -fx-border-color: #AAAAAA; -fx-border-radius: 3; -fx-background-radius: 3; -fx-font-size: 13px;"/>
+            <Button text="Buscar"    prefWidth="120" prefHeight="32" onAction="#buscar"
+                style="-fx-background-color: #D6D6D6; -fx-border-color: #AAAAAA; -fx-border-radius: 3; -fx-background-radius: 3; -fx-font-size: 13px;"/>
+            <Button text="Atualizar" prefWidth="120" prefHeight="32" onAction="#atualizar"
+                style="-fx-background-color: #D6D6D6; -fx-border-color: #AAAAAA; -fx-border-radius: 3; -fx-background-radius: 3; -fx-font-size: 13px;"/>
+            <Button text="Deletar"   prefWidth="120" prefHeight="32" onAction="#deletar"
+                style="-fx-background-color: #D6D6D6; -fx-border-color: #AAAAAA; -fx-border-radius: 3; -fx-background-radius: 3; -fx-font-size: 13px;"/>
+        </HBox>
+
+        <!-- Voltar -->
+        <HBox alignment="CENTER" prefHeight="60" style="-fx-background-color: #E8E8E8;">
+            <Button text="Voltar" prefWidth="100" prefHeight="30" onAction="#voltar"
+                style="-fx-background-color: #D6D6D6; -fx-border-color: #AAAAAA; -fx-border-radius: 3; -fx-background-radius: 3; -fx-font-size: 13px;"/>
+        </HBox>
+
+    </VBox>
+</AnchorPane>
